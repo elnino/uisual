@@ -225,7 +225,7 @@ img { filter: brightness(.9375); }
     calc(var(--container) - .5rem);
   position: absolute;
   right: calc(var(--container) * -1);
-  top: 1.375rem;
+  top: 1.4375rem;
   transition: all 250ms ease;
   visibility: hidden;
   z-index: 3;
@@ -335,7 +335,7 @@ main {
     --typography-smaller: .72rem;
   }
   
-  .menu { top: 1.5rem; }
+  .menu { top: 1.5625rem; }
   
 }
 
