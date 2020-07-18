@@ -1,0 +1,12 @@
+name        = "Uisual"
+license     = "Kursif"
+licenselink = "https://github.com/elnino/uisual/blob/master/LICENSE"
+description = "Minimal theme for Hugo."
+homepage    = "https://github.com/elnino/uisual"
+tags        = []
+features    = []
+min_version = "0.74.1"
+
+[author]
+  name     = "Kursif Studio"
+  homepage = "https://kursif.com"

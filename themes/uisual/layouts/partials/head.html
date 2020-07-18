@@ -1,0 +1,22 @@
+<head>
+  <!-- CSS -->
+  {{ $styleCSS  := resources.Get "/style.css" | minify }}
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="El Nino H. Maulana">
+  <meta name="description" content="{{ .Params.desc | safeHTML }}">
+  <meta name="referrer" content="unsafe-url">
+  <meta name="robots" content="index, follow">
+  <!-- Speed -->
+  <link rel="preconnect" href="https://res.cloudinary.com">
+  <link rel="dns-prefetch" href="https://res.cloudinary.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <!-- Link -->
+  <link rel="me" href="mailto:hi@uisual.com">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="icon" type="image/png" href="/images/favicon.png" sizes="48x48">
+  <link rel="stylesheet" href="{{ $styleCSS.Permalink }}">
+  <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} Inspiration {{ end }}{{ if .IsNode }}{{ if gt .Paginator.PageNumber 1 }} &ndash; Page {{ .Paginator.PageNumber }}{{ end }}{{ end }} &mdash; Uisual</title>
+</head>

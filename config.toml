@@ -1,0 +1,38 @@
+title        = "Uisual"
+baseURL      = "https://uisual.com"
+languageCode = "en-us"
+theme        = "uisual"
+themesDir    = "themes"
+assetDir     = "static/assets"
+publishDir   = "docs"
+paginate     = 18
+paginatePath = "page"
+
+defaultContentLanguage     = "en"
+enableRobotsTXT            = true
+disableRSS                 = true
+disableHugoGeneratorInject = true
+disableKinds               = ["taxonomy", "taxonomyTerm", "RSS"]
+
+googleAnalytics = "UA-145441322-4"
+
+[permalinks]
+  posts = "/:title"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = false
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xHTML = false

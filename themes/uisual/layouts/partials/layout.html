@@ -1,0 +1,9 @@
+<section class="information">
+  <h1>{{ .Title | safeHTML }}</h1>
+  <p>{{ .Params.subtitle | safeHTML }}</p>
+</section>
+<section class="grid grid-feed">
+  {{ range .Paginator.Pages }}
+    {{- partial "card.html" . -}}
+  {{ end }}
+</section>
