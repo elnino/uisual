@@ -3,11 +3,11 @@
   <p>Made by Kursif</p>
 </footer>
 <!-- JS Files -->
-{{ $fontJS  := resources.Get "/font.js" | minify }}
-{{ $echoJS  := resources.Get "/echo.js" | minify }}
+{{ $fontJS  := resources.Get "js/font.js" | minify }}
+{{ $echoJS  := resources.Get "js/echo.js" | minify }}
 
 <!-- Concat JS -->
-{{ $scriptJS  := slice $fontJS $echoJS | resources.Concat "/script.js" | minify }}
+{{ $scriptJS  := slice $fontJS $echoJS | resources.Concat "js/script.js" | minify }}
 
 <!-- Defer JS -->
 <script async>
