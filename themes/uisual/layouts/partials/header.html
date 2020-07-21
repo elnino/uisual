@@ -1,5 +1,5 @@
 <!-- Style -->
-{{ $style     := "background: var(--secondary-color);" | safeCSS }}
+{{ $style := "background: var(--secondary-color);" | safeCSS }}
 <!-- URL -->
 {{ $single    := "/website/single/" }}
 {{ $ecommerce := "/website/ecommerce/" }}
@@ -13,12 +13,12 @@
     <input type="checkbox" id="menu">
     <label for="menu" class="hamburger"></label>
     <nav class="menu">
-      <a {{ if .IsNode }}{{ if and (eq .Paginator.PageNumber 1) (eq .RelPermalink $single) }} href="#" style="{{ $style }}" {{ else if and (gt .Paginator.PageNumber 1) (eq .RelPermalink $single) }} href="{{ $single }}" style="{{ $style }}" {{ else }} href="{{ $single }}" {{ end }}{{ end }} role="link" aria-label="Discover one page web design inspiration." class="button button-secondary">One Page</a>
       <a {{ if .IsNode }}{{ if and (eq .Paginator.PageNumber 1) (eq .RelPermalink $ecommerce) }} href="#" style="{{ $style }}" {{ else if and (gt .Paginator.PageNumber 1) (eq .RelPermalink $ecommerce) }} href="{{ $ecommerce }}" style="{{ $style }}" {{ else }} href="{{ $ecommerce }}" {{ end }}{{ end }} role="link" aria-label="Discover ecommerce web design inspiration." class="button button-secondary">Ecommerce</a>
-      <a {{ if .IsNode }}{{ if and (eq .Paginator.PageNumber 1) (eq .RelPermalink $saas) }} href="#" style="{{ $style }}" {{ else if and (gt .Paginator.PageNumber 1) (eq .RelPermalink $saas) }} href="{{ $saas }}" style="{{ $style }}" {{ else }} href="{{ $saas }}" {{ end }}{{ end }} role="link" aria-label="Discover saas web design inspiration." class="button button-secondary">SaaS</a>
       <a {{ if .IsNode }}{{ if and (eq .Paginator.PageNumber 1) (eq .RelPermalink $iot) }} href="#" style="{{ $style }}" {{ else if and (gt .Paginator.PageNumber 1) (eq .RelPermalink $iot) }} href="{{ $iot }}" style="{{ $style }}" {{ else }} href="{{ $iot }}" {{ end }}{{ end }} role="link" aria-label="Discover iot web design inspiration." class="button button-secondary">IoT</a>
-      <a {{ if .IsNode }}{{ if and (eq .Paginator.PageNumber 1) (eq .RelPermalink $studio) }} href="#" style="{{ $style }}" {{ else if and (gt .Paginator.PageNumber 1) (eq .RelPermalink $studio) }} href="{{ $studio }}" style="{{ $style }}" {{ else }} href="{{ $studio }}" {{ end }}{{ end }} role="link" aria-label="Discover studio web design inspiration." class="button button-secondary">Studio</a>
+      <a {{ if .IsNode }}{{ if and (eq .Paginator.PageNumber 1) (eq .RelPermalink $single) }} href="#" style="{{ $style }}" {{ else if and (gt .Paginator.PageNumber 1) (eq .RelPermalink $single) }} href="{{ $single }}" style="{{ $style }}" {{ else }} href="{{ $single }}" {{ end }}{{ end }} role="link" aria-label="Discover one page web design inspiration." class="button button-secondary">One Page</a>
       <a {{ if .IsNode }}{{ if and (eq .Paginator.PageNumber 1) (eq .RelPermalink $portfolio) }} href="#" style="{{ $style }}" {{ else if and (gt .Paginator.PageNumber 1) (eq .RelPermalink $portfolio) }} href="{{ $portfolio }}" style="{{ $style }}" {{ else }} href="{{ $portfolio }}" {{ end }}{{ end }} role="link" aria-label="Discover portfolio web design inspiration." class="button button-secondary">Portfolio</a>
+      <a {{ if .IsNode }}{{ if and (eq .Paginator.PageNumber 1) (eq .RelPermalink $saas) }} href="#" style="{{ $style }}" {{ else if and (gt .Paginator.PageNumber 1) (eq .RelPermalink $saas) }} href="{{ $saas }}" style="{{ $style }}" {{ else }} href="{{ $saas }}" {{ end }}{{ end }} role="link" aria-label="Discover saas web design inspiration." class="button button-secondary">SaaS</a>
+      <a {{ if .IsNode }}{{ if and (eq .Paginator.PageNumber 1) (eq .RelPermalink $studio) }} href="#" style="{{ $style }}" {{ else if and (gt .Paginator.PageNumber 1) (eq .RelPermalink $studio) }} href="{{ $studio }}" style="{{ $style }}" {{ else }} href="{{ $studio }}" {{ end }}{{ end }} role="link" aria-label="Discover studio web design inspiration." class="button button-secondary">Studio</a>
     </nav>
   </div>
   <a href="{{ if .IsNode }}{{ if and (eq .Paginator.PageNumber 1) (.IsHome) }}#{{ else }}{{ .Site.BaseURL }}{{ end }}{{ end }}" role="link" aria-label="Go to Uisual homepage.">
