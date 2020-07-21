@@ -10,8 +10,7 @@
 
 <header role="banner" class="grid grid-header">
   <div class="navigation">
-    <input type="checkbox" id="menu" name="menu">
-    <label for="menu" class="hamburger"></label>
+    <div class="hamburger" onclick="menu()"></div>
     <nav class="menu">
       <a {{ if .IsNode }}{{ if and (eq .Paginator.PageNumber 1) (eq .RelPermalink $ecommerce) }} href="#" style="{{ $style }}" {{ else if and (gt .Paginator.PageNumber 1) (eq .RelPermalink $ecommerce) }} href="{{ $ecommerce }}" style="{{ $style }}" {{ else }} href="{{ $ecommerce }}" {{ end }}{{ end }} role="link" aria-label="Discover ecommerce web design inspiration." class="button button-secondary">Ecommerce</a>
       <a {{ if .IsNode }}{{ if and (eq .Paginator.PageNumber 1) (eq .RelPermalink $iot) }} href="#" style="{{ $style }}" {{ else if and (gt .Paginator.PageNumber 1) (eq .RelPermalink $iot) }} href="{{ $iot }}" style="{{ $style }}" {{ else }} href="{{ $iot }}" {{ end }}{{ end }} role="link" aria-label="Discover iot web design inspiration." class="button button-secondary">IoT</a>
@@ -21,7 +20,7 @@
       <a {{ if .IsNode }}{{ if and (eq .Paginator.PageNumber 1) (eq .RelPermalink $studio) }} href="#" style="{{ $style }}" {{ else if and (gt .Paginator.PageNumber 1) (eq .RelPermalink $studio) }} href="{{ $studio }}" style="{{ $style }}" {{ else }} href="{{ $studio }}" {{ end }}{{ end }} role="link" aria-label="Discover studio web design inspiration." class="button button-secondary">Studio</a>
     </nav>
   </div>
-  <a href="{{ if .IsNode }}{{ if and (eq .Paginator.PageNumber 1) (.IsHome) }}#{{ else }}{{ .Site.BaseURL }}{{ end }}{{ end }}" role="link" aria-label="Go to Uisual homepage.">
+  <a href="{{ if .IsNode }}{{ if and (eq .Paginator.PageNumber 1) (.IsHome) }}#{{ else }}{{ .Site.BaseURL }}{{ end }}{{ end }}" role="link" aria-label="Go to Uisual homepage." class="home">
     <svg viewBox="0 0 48 48" height="18" width="18" class="logo">
       <path fill="#f1f1f1" d="M48 24c0 13.3-10.7 24-24 24S0 37.3 0 24V0h12v24c0 6.6 5.4 12 12 12s12-5.4 12-12v-6h12v6zm0-24H36v12h12V0z"/>
     </svg>

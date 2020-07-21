@@ -5,9 +5,10 @@
 <!-- JS Files -->
 {{ $fontJS := resources.Get "js/font.js" | minify }}
 {{ $echoJS := resources.Get "js/echo.js" | minify }}
+{{ $menuJS := resources.Get "js/menu.js" | minify }}
 
 <!-- Concat JS -->
-{{ $scriptJS := slice $fontJS $echoJS | resources.Concat "js/script.js" | minify }}
+{{ $scriptJS := slice $fontJS $echoJS $menuJS | resources.Concat "js/script.js" | minify }}
 
 <!-- Defer JS -->
 <script async>
