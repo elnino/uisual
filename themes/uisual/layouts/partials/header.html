@@ -10,7 +10,7 @@
 
 <header role="banner" class="grid grid-header">
   <div class="navigation">
-    <input type="checkbox" id="menu">
+    <input type="checkbox" id="menu" name="menu">
     <label for="menu" class="hamburger"></label>
     <nav class="menu">
       <a {{ if .IsNode }}{{ if and (eq .Paginator.PageNumber 1) (eq .RelPermalink $ecommerce) }} href="#" style="{{ $style }}" {{ else if and (gt .Paginator.PageNumber 1) (eq .RelPermalink $ecommerce) }} href="{{ $ecommerce }}" style="{{ $style }}" {{ else }} href="{{ $ecommerce }}" {{ end }}{{ end }} role="link" aria-label="Discover ecommerce web design inspiration." class="button button-secondary">Ecommerce</a>
