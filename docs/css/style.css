@@ -8,7 +8,8 @@ TABLE OF CONTENT
 |  1.4 LAYOUT
 |  1.5 BUTTON
 2.0 HEADER
-|  2.1 MENU
+|  2.1 NAVIGATION
+|  2.2 MENU
 3.0 MAIN
 |  3.1 INFORMATION
 |  3.2 FEED
@@ -131,7 +132,6 @@ img { filter: brightness(.9375); }
 
 .button-primary {
   background: var(--brand-color);
-  margin-left: auto;
   z-index: 3;
 }
 
@@ -142,7 +142,7 @@ img { filter: brightness(.9375); }
 }
 
 .button-action {
-  background: rgba(255,255,255,.5);
+  background: rgba(255, 255, 255, .5);
   bottom: 1rem;
   padding: .5rem;
   position: absolute;
@@ -154,20 +154,18 @@ img { filter: brightness(.9375); }
 2.0 HEADER
 --------------------------------------------------------------*/
 
-.grid-header {
+/*--------------------------------------------------------------
+|
+| 2.1 NAVIGATION
+|
+--------------------------------------------------------------*/
+
+.grid-navigation {
   grid-gap: 1rem;
-  grid-template-columns: auto auto 1fr;
+  grid-template-columns: auto 1fr auto;
   line-height: 1;
   position: relative;
 }
-
-.home { z-index: 3; }
-
-/*--------------------------------------------------------------
-|
-| 2.1 MENU
-|
---------------------------------------------------------------*/
 
 /* HAMBURGER */
 
@@ -189,8 +187,7 @@ img { filter: brightness(.9375); }
   height: .125rem;
   left: 0;
   position: absolute;
-  transition:
-    transform 250ms cubic-bezier(.785, .135, .15, .86);
+  transition: transform 250ms ease;
   width: 1.125rem;
 }
 
@@ -206,7 +203,18 @@ img { filter: brightness(.9375); }
   transform: translateY(-3px) rotate(45deg);
 }
 
-/* MENU */
+/* LOGO */
+
+.logo {
+  margin-right: auto;
+  z-index: 3;
+}
+
+/*--------------------------------------------------------------
+|
+| 2.2 MENU
+|
+--------------------------------------------------------------*/
 
 .menu {
   align-items: center;
@@ -215,15 +223,15 @@ img { filter: brightness(.9375); }
   display: flex;
   flex-direction: column;
   flex-flow: wrap;
-  left: calc(var(--container) * -1);
+  left: 0;
   opacity: 0;
   padding:
     calc(var(--container) * 2 + var(--header))
     var(--container)
     calc(var(--container) - .5rem);
   position: absolute;
-  right: calc(var(--container) * -1);
-  top: calc(var(--container) * -1);
+  right: 0;
+  top: 0;
   transition: all 250ms ease;
   visibility: hidden;
   z-index: 2;
@@ -308,7 +316,7 @@ main {
 4.0 FOOTER
 --------------------------------------------------------------*/
 
-.grid-footer {
+.grid-attribute {
   color: var(--secondary-text);
   font-size: var(--typography-smaller);
   grid-template-columns: 1fr auto;
@@ -359,7 +367,7 @@ main {
     );
   }
   
-  .logo {
+  .logo svg {
     height: 1.25rem;
     width: 1.25rem;
   }
@@ -398,14 +406,14 @@ main {
   
   img { transition: filter 250ms ease; }
   
-  .grid-feed { grid-template-columns: repeat(3, 1fr); }
-  
   .button-primary:hover { background: #0f39d0; }
   
   .button-secondary:hover,
   a.pagination-link:hover {
     background: var(--secondary-color);
   }
+  
+  .grid-feed { grid-template-columns: repeat(3, 1fr); }
   
   .feed-inspiration:hover img { filter: brightness(1); }
   
