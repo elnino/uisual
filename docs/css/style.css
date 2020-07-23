@@ -130,10 +130,7 @@ img { filter: brightness(.9375); }
   padding: .3125rem .625rem;
 }
 
-.button-primary {
-  background: var(--brand-color);
-  z-index: 3;
-}
+.button-primary { background: var(--brand-color); }
 
 .button-secondary {
   border: .0625rem solid var(--secondary-color);
@@ -165,6 +162,7 @@ img { filter: brightness(.9375); }
   grid-template-columns: auto 1fr auto;
   line-height: 1;
   position: relative;
+  z-index: 3;
 }
 
 /* HAMBURGER */
@@ -177,7 +175,6 @@ img { filter: brightness(.9375); }
   padding-top: .25rem;
   position: relative;
   width: 1.125rem;
-  z-index: 3;
 }
 
 .hamburger::before,
@@ -205,10 +202,7 @@ img { filter: brightness(.9375); }
 
 /* LOGO */
 
-.logo {
-  margin-right: auto;
-  z-index: 3;
-}
+.logo { margin-right: auto; }
 
 /*--------------------------------------------------------------
 |
