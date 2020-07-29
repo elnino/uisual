@@ -25,11 +25,9 @@
   
   if ( window.addEventListener ) {
     window.addEventListener("load", deferJS, false);
-  }
-  else if ( window.attachEvent ) {
+  } else if ( window.attachEvent ) {
     window.attachEvent("onload", deferJS);
-  }
-  else {
+  } else {
     window.onload = deferJS;
   }
 </script>
