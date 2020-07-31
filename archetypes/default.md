@@ -1,7 +1,7 @@
 ---
-title    : "{{ replace .Name "-" " " | title }}"
-thumbnail: "#"
-address  : "#"
+title    : {{ replace .Name "-" " " | title }}
+thumbnail: #
+address  : #
 sitemap  : false
 date     : {{ .Date }}
 ---
