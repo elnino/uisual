@@ -18,21 +18,3 @@ googleAnalytics = "UA-145441322-4"
 
 [permalinks]
   posts = "/:title"
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      definitionList = true
-      footnote = true
-      linkify = true
-      strikethrough = true
-      table = true
-      taskList = true
-      typographer = true
-    [markup.goldmark.parser]
-      attribute = true
-      autoHeadingID = false
-    [markup.goldmark.renderer]
-      hardWraps = false
-      unsafe = true
-      xHTML = false
